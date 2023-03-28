@@ -16,66 +16,14 @@ export class HomePage {
   constructor() { }
 
   verificarRadio() {
-    //if de desconto de distancia
-    if (this.distancia <= '15') {
-
-      //if de desconto de unidades
-      if (this.unidade >= '5') {
-
-        //if calculo de frete
-        if (this.tipofrete === 'regular') {
-          this.res = (((parseFloat(this.peso) * 0.6) + parseFloat(this.distancia) * 0.6) - 5) - 5;
-        }
-        else if (this.tipofrete === 'expresso') {
-          this.res = (((parseFloat(this.peso) * 0.9) + parseFloat(this.distancia) * 0.9) - 5) - 5;
-        }
-        else {
-          this.res = (((parseFloat(this.peso) * 1) + parseFloat(this.distancia) * 1) - 5) - 5;
-        }
-      }
-
-      else {
-        if (this.tipofrete === 'regular') {
-          this.res = ((parseFloat(this.peso) * 0.6) + parseFloat(this.distancia) * 0.6) - 5;
-        }
-        else if (this.tipofrete === 'expresso') {
-          this.res = ((parseFloat(this.peso) * 0.9) + parseFloat(this.distancia) * 0.9) - 5;
-        }
-        else {
-          this.res = ((parseFloat(this.peso) * 1) + parseFloat(this.distancia) * 1) - 5;
-        }
-      }
+    if (this.tipofrete === 'regular') {
+      this.res = (parseFloat(this.peso) * 1.3) + (parseFloat(this.distancia) * 0.04) + 7;
     }
-
+    else if (this.tipofrete === 'expresso') {
+      this.res = (parseFloat(this.peso) * 1.5) + (parseFloat(this.distancia) * 0.06) + 10;
+    }
     else {
-      //if de desconto de unidades
-      if (this.unidade >= '5') {
-
-        //if calculo de frete
-        if (this.tipofrete === 'regular') {
-          this.res = ((parseFloat(this.peso) * 0.6) + parseFloat(this.distancia) * 0.6) - 5;
-        }
-        else if (this.tipofrete === 'expresso') {
-          this.res = ((parseFloat(this.peso) * 0.9) + parseFloat(this.distancia) * 0.9) - 5;
-        }
-        else {
-          this.res = ((parseFloat(this.peso) * 1) + parseFloat(this.distancia) * 1) - 5;
-        }
-      }
-
-      else {
-        if (this.tipofrete === 'regular') {
-          this.res = (parseFloat(this.peso) * 0.6) + parseFloat(this.distancia) * 0.6;
-        }
-        else if (this.tipofrete === 'expresso') {
-          this.res = (parseFloat(this.peso) * 0.9) + parseFloat(this.distancia) * 0.9;
-        }
-        else {
-          this.res = (parseFloat(this.peso) * 1) + parseFloat(this.distancia) * 1;
-        }
-      }
+      this.res = (parseFloat(this.peso) * 1.7) + (parseFloat(this.distancia) * 0.12) + 15;
     }
   }
 }
-
-
