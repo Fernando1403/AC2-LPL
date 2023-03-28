@@ -17,10 +17,10 @@ export class HomePage {
 
   verificarRadio() {
     //if de desconto de distancia
-    if (this.distancia <= '25') {
+    if (this.distancia <= '15') {
 
       //if de desconto de unidades
-      if (this.unidade >= '10') {
+      if (this.unidade >= '5') {
 
         //if calculo de frete
         if (this.tipofrete === 'regular') {
@@ -49,7 +49,7 @@ export class HomePage {
 
     else {
       //if de desconto de unidades
-      if (this.unidade >= '10') {
+      if (this.unidade >= '5') {
 
         //if calculo de frete
         if (this.tipofrete === 'regular') {
